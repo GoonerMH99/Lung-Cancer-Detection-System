@@ -1,5 +1,5 @@
 # Lung-Cancer-Detection-System
-Web Application developed to detect cancer nodules in CT-Scans image dataset using deep learning model "CNN", this project was submitted as a graduation project at the "Faculty of Computers and Artificial Intelligence-Cairo University"
+Web Application developed to detect cancer nodules in CT-Scans image dataset using deep learning model "CNN", this project was submitted as a graduation project at the "Faculty of Computers and Artificial Intelligence-Cairo University" 2021-2022
 
 ## Table of Contents
 
