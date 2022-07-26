@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <link rel="stylesheet" href="css/tooplate-style.css">
+
+</head>
+<body class="aboutus">
+   <section class="navbar navbar-default navbar-static-top" >
+          <div class="container">
+
+               <div class="navbar-header">
+                    <a href="index.html" class="navbar-brand">Lung Cancer Detection</a>
+               </div>
+               <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                         <li><a href="{{url_for('index')}}" class="smoothScroll">Home</a></li>
+                         <li><a href="{{url_for('about')}}" class="smoothScroll">About Us</a></li>
+                         <li><a href="{{url_for('RelatedArticles')}}" class="smoothScroll">Related Articles</a></li>
+                         <li><a href="{{url_for('contact')}}" class="smoothScroll">Contact</a></li>
+                         <li class="uploadbtn" ><a href="{{url_for('info')}}">Upload CT</a></li>
+                    </ul>
+               </div>
+
+          </div>
+     </section>
+    <section id="about" style="background-color:#ffffff">
+          <div class="container"  style=" background-image:url({{url_for('static',filename='images/about-bbg.jpg')}});background-size: cover;
+    padding-top: 150px;
+    padding-bottom: 150px;  box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.35);" >
+               <div class="row">
+
+                    <div class="col-md-6 col-sm-6" >
+                         <div class="about-info" >
+                              <h2 class="wow fadeInUp" >Welcome to Lung Cancer Detection System</h2>
+                              <div class="wow fadeInUp" >
+                                   <p>Now, with our technology, any Patient or healthcare professional can upload image of CT scan of the Lung and check there is a tumor or not ontime.</p>
+                                   <p>Thanks to ML guiding us through every step of the scanning and image-capture process in real time. The software also automatically processing the image, a key measure of Lung health.</p>
+                              </div>
+                              <figure class="profile wow fadeInUp" >
+
+                                   <figcaption>
+                                        <h3>Powered by ML team</h3>
+                                        <p>Bioinformatics</p>
+                                   </figcaption>
+                              </figure>
+                                  </div>
+                    </div>
+
+               </div>
+          </div>
+
+     </section>
+
+    <section id="news" style="background-color:#ffffff">
+        <div class="container">
+             <div class="row">
+
+                  <div class="col-md-12 col-sm-12">
+                       <div class="section-title wow fadeInUp">
+                            <h2>Our Team</h2>
+                       </div>
+                  </div>
+
+                  <div class="col-md-4 col-sm-6">
+                       <div class="news-thumb wow fadeInUp" >
+                            <a href="news-detail.html">
+                                 <img src="{{url_for('static',filename='images/ma.jpeg')}}" class="img-responsive" alt="">
+                            </a>
+                            <div class="news-info">
+                                 <h3><a href="">Ahmed Mamdouh</a></h3>
+                                 <p>Software Engineer</p>
+                            </div>
+                       </div>
+                  </div>
+
+                  <div class="col-md-4 col-sm-6">
+                       <div class="news-thumb wow fadeInUp" >
+                            <a href="news-detail.html">
+                                 <img src={{url_for('static',filename='images/tony.JPG')}} class="img-responsive" alt="">
+                            </a>
+                            <div class="news-info">
+                                 <h3><a href="">Antony Magdy</a></h3>
+                                 <p>Cyber Secuirty Engineer</p>
+                            </div>
+                       </div>
+                  </div>
+
+                  <div class="col-md-4 col-sm-6">
+                       <div class="news-thumb wow fadeInUp" >
+                            <a href="news-detail.html">
+                                 <img src={{url_for('static',filename='images/2022_07_06_15_49_IMG_3156.JPG')}} class="img-responsive" alt="">
+                            </a>
+                            <div class="news-info">
+                                 <h3><a href="">Ali eldin Mohamed</a></h3>
+                                 <p>Software Engineer</p>
+                            </div>
+                       </div>
+                  </div>
+
+             </div>
+              <div class="col-md-4 col-sm-6">
+                       <div class="news-thumb wow fadeInUp">
+                            <a href="news-detail.html">
+                                 <img src={{url_for('static',filename='images/gooner.jpg')}} class="img-responsive" alt="">
+                            </a>
+                            <div class="news-info">
+                                 <h3><a href="">  Muhamed Hussein</a></h3>
+                                 <p> Data Analysis Engineer</p>
+                            </div>
+                       </div>
+                  </div>
+
+             </div>
+
+
+        </div>
+   </section>
+
+</body>
+</html>
