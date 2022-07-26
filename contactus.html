@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+</head>
+
+<body  style="background-image:url({{url_for('static',filename='images/istockphoto-1296447730-612x612.jpg')}});opacity: 0.8;background-size: cover; ">
+   <section class="navbar navbar-default navbar-static-top" role="navigation">
+          <div class="container">
+
+               <div class="navbar-header">
+                    <a href="index.html" class="navbar-brand">Lung Cancer Detection</a>
+               </div>
+
+               <!-- MENU LINKS -->
+               <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                         <li><a href="{{url_for('index')}}" class="smoothScroll">Home</a></li>
+                         <li><a href="{{url_for('about')}}" class="smoothScroll">About Us</a></li>
+                         <li><a href="{{url_for('RelatedArticles')}}" class="smoothScroll">Related Articles</a></li>
+                         <li><a href="{{url_for('contact')}}" class="smoothScroll">Contact</a></li>
+                         <li class="uploadbtn" ><a href="{{url_for('info')}}">Upload CT</a></li>
+                    </ul>
+               </div>
+
+          </div>
+     </section>
+
+
+
+<form class="form-style-9" action="/contact" method="POST">
+    <fieldset >
+        <legend> Send Us A Message</legend>
+<ul>
+<li>
+    <input type="text" name="name" class="field-style field-split align-left" placeholder="Name"  required/>
+    <input type="email" name="email" class="field-style field-split align-right" placeholder="Email" required/>
+
+</li>
+<li>
+    <input type="text" name="Phone" class="field-style field-split align-left" placeholder="Phone" />
+    <input type="text" name="Age" class="field-style field-split align-right" placeholder="Age" />
+</li>
+
+<li>
+<textarea name="message" class="field-style" placeholder="Message" required></textarea>
+</li>
+<li>
+<input type="submit" value="Send Message" />
+</li>
+</ul>
+
+   </fieldset>
+</form>
+
+</body>
+</html>

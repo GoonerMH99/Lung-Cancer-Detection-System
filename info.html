@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Information</title>
+   <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+
+    <link rel="stylesheet" href="css/tooplate-style.css">
+</head>
+<body>
+       <section class="navbar navbar-default navbar-static-top" role="navigation">
+          <div class="container">
+
+               <div class="navbar-header">
+                    <a href="index.html" class="navbar-brand">Lung Cancer Detection</a>
+               </div>
+
+               <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                         <li><a href="{{url_for('index')}}" class="smoothScroll">Home</a></li>
+                         <li><a href="{{url_for('about')}}" class="smoothScroll">About Us</a></li>
+                         <li><a href="{{url_for('RelatedArticles')}}" class="smoothScroll">Related Articles</a></li>
+                         <li><a href="{{url_for('contact')}}" class="smoothScroll">Contact</a></li>
+                         <li class="uploadbtn" ><a href="{{url_for('info')}}">Upload CT</a></li>
+                    </ul>
+               </div>
+
+          </div>
+     </section>
+    <section id="upload" data-stellar-background-ratio="3">
+        <div class="container">
+             <div class="row">
+
+                  <div class="col-md-6 col-sm-6">
+                       <img src="{{url_for('static',filename='images/appointment-image.jpg')}}" class="img-responsive" alt="">
+                  </div>
+
+                  <div class="col-md-6 col-sm-6">
+                       <form  method="POST" action="/info">
+
+                            <div class="section-title wow fadeInUp" data-wow-delay="0.4s">
+                                 <h2>Patient Information</h2>
+                            </div>
+                            <fieldset>
+                                 <legend>Personal Info</legend>
+                            <div class="wow fadeInUp" data-wow-delay="0.8s">
+                                 <div class="col-md-6 col-sm-6">
+                                      <label for="name"><b>Name</b></label>
+                                      <input type="text" class="form-control" id="name" name="name" placeholder="Full Name" required>
+                                 </div>
+
+                                 <div class="col-md-6 col-sm-6">
+                                      <label for="email"><b>Email</b></label>
+                                      <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
+                                 </div>
+
+                                 <div class="col-md-6 col-sm-6">
+                                      <label for="date"><b>Age</b></label>
+                                      <input type="text" id="date" name="date" value="" class="form-control" required>
+                                 </div>
+                                 </fieldset>
+
+                                 <fieldset>
+                                      <legend>Patient History</legend>
+                                 <div class="col-md-6 col-sm-6">
+                                      <label for="selectt"><b>Smoking History</b></label>
+                                      <select class="form-control" id="selectt" name="selectS">
+                                           <option value="Non Smoker">Non Smoker</option>
+                                           <option value="Smoker">Smoker</option>
+                                           <option value="Quit Smoker">Quit Smoker</option>
+                                      </select>
+                                 </div>
+                                 <div class="col-md-6 col-sm-6">
+                                      <label for="selecttt"><b>Gentic Cancer</b></label>
+                                      <select class="form-control" id="selecttt" name="selectG">
+                                            <option value="YES">YES</option>
+                                           <option selected value="NO">NO</option>
+                                      </select>
+                                 </div>
+                                 <div class="col-md-6 col-sm-6">
+                                    <label for="selec"> <b>Diabetes</b></label>
+                                    <select class="form-control" id="selec" name="selectD">
+                                         <option value="YES">YES</option>
+                                         <option selected value="NO">NO</option>
+                                    </select>
+                               </div>
+                               <div class="col-md-6 col-sm-6">
+                                <label for="sele"><b>Heart disease</b></label>
+                                <select class="form-control" id="sele" name="selectH">
+                                     <option value="YES">YES</option>
+                                     <option selected value="NO">NO</option>
+                                </select>
+                           </div>
+                           <div class="col-md-6 col-sm-6">
+                            <label for="select"><b>Blood Pressure disease</b></label>
+                            <select class="form-control" id="select" name="selectB">
+                                 <option value="YES">YES</option>
+                                 <option selected value="NO">NO</option>
+                            </select>
+                       </div>
+                                 <div class="col-md-12 col-sm-12">
+                                      <label for="Message"> <b>Additional Details</b></label>
+                                      <textarea class="form-control" rows="5" id="message" name="message" placeholder="Type here"></textarea>
+                                      <button type="submit"  class="form-control" id="cf-submit" name="submit">Save</button>
+                                 </div>
+
+                            </div>
+
+                       </fieldset>
+                      </form>
+                  </div>
+
+             </div>
+        </div>
+   </section>
+
+
+
+</body>
+</html>
